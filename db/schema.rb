@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130421163024) do
+ActiveRecord::Schema.define(:version => 20130501025726) do
+
+  create_table "questions", :force => true do |t|
+    t.string  "title"
+    t.string  "detail"
+    t.integer "user_id"
+    t.integer "session_id"
+    t.string  "created_at", :null => false
+    t.string  "updated_at", :null => false
+  end
+
+  add_index "questions", ["session_id"], :name => "index_questions_on_session_id"
+  add_index "questions", ["user_id"], :name => "index_questions_on_user_id"
 
   create_table "sessions", :force => true do |t|
     t.string   "name"
@@ -19,8 +31,19 @@ ActiveRecord::Schema.define(:version => 20130421163024) do
     t.date     "start_date"
     t.date     "end_date"
     t.integer  "status"
+    t.integer  "user_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  add_index "sessions", ["user_id"], :name => "index_sessions_on_user_id"
+
+  create_table "users", :force => true do |t|
+    t.string "username"
+    t.string "password"
+    t.date   "created_at", :null => false
+    t.date   "updated_at", :null => false
+    t.string "name"
   end
 
 end
