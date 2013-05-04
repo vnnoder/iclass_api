@@ -1,9 +1,15 @@
 IclassApi::Application.routes.draw do
-  resources :questions, except: [:new, :edit]
+  devise_for :users
 
-  resources :users, except: [:new, :edit]
+  resources :questions
+  resources :talks
+  resources :users
 
-  resources :sessions, except: [:new, :edit]
+  namespace :api do
+    devise_for :users
+    resources :registrations, :only => [:create]
+    resources :sessions, :only => [:create, :destroy]
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

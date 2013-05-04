@@ -2,18 +2,6 @@
 
 # Your secret key for verifying the integrity of signed cookies.
 # If you change this key, all old signed cookies will become invalid!
-
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-# You can use `rake secret` to generate a secure secret key.
-
-# Make sure your secret_key_base is kept private
-# if you're sharing your code publicly.
-
-# Although this is not needed for an api-only application, rails4 
-# requires secret_key_base or secret_toke to be defined, otherwise an 
-# error is raised.
-# Using secret_token for rails3 compatibility. Change to secret_key_base
-# to avoid deprecation warning.
-# Can be safely removed in a rails3 api-only application.
-IclassApi::Application.config.secret_token = 'f0b0853a6c049ca5f3a05e0603148c2883e0dec17be27186ef98cf2ea0d85698cfc1fc3ea1cf3cceb5e81d160d73ac758c30711e076ba40b60e6d5780a4fc633'
+IclassApi::Application.config.secret_token = 'd9761e29c717c79e174d82c5d23776265289d2f55fa52c2274920ed9aef910973a5bae44ef1b287137fd35006ee6eab31d50282090a55844c773057b13361486'
