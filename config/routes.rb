@@ -7,8 +7,11 @@ IclassApi::Application.routes.draw do
 
   namespace :api do
     devise_for :users
-    resources :registrations, :only => [:create]
-    resources :sessions, :only => [:create, :destroy]
+    #resources :registrations, :only => [:create]
+    #resources :sessions, :only => [:create, :destroy]
+    match '/sign_up' => 'registrations#create', :via => :post, :as => 'sign_up'
+    match '/sign_in' => 'sessions#create', :via => :post, :as => 'sign_in'
+    match '/sign_out' => 'sessions#destroy', :via => :delete, :as => 'sign_out'
   end
 
   # The priority is based upon order of creation:

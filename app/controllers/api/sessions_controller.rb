@@ -18,6 +18,7 @@ class Api::SessionsController < Api::BaseController
 
   def destroy
     resource = User.find_for_database_authentication(:username => params[:user_login][:username])
+    return not_exists_user unless resource
     resource.authentication_token = nil
     resource.save
     render :json=> {:success=>true}
@@ -31,6 +32,10 @@ class Api::SessionsController < Api::BaseController
 
   def invalid_login_attempt
     render :json=> {:success=>false, :message=>"Error with your login or password"}, :status=>401
+  end
+
+  def not_exists_user
+    render :json=> {:success=>false, :message=>"Invalid username"}, :status=>401
   end
 
 end
