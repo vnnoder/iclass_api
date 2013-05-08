@@ -1,6 +1,5 @@
 class Api::RegistrationsController < Api::BaseController
 
-  respond_to :json
   def create
 
       user = User.new(params[:user])

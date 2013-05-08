@@ -1,7 +1,6 @@
 class Api::SessionsController < Api::BaseController
   before_filter :authenticate_user!, :except => [:create, :destroy]
   before_filter :ensure_params_exist
-  respond_to :json
 
   def create
     resource = User.find_for_database_authentication(:username => params[:user_login][:username])
@@ -10,7 +9,7 @@ class Api::SessionsController < Api::BaseController
     if resource.valid_password?(params[:user_login][:password])
       sign_in(:user, resource)
       resource.ensure_authentication_token!
-      render :json=> {:success=>true, :auth_token=>resource.authentication_token, :username=>resource.username}
+      render :json=> {:success=>true, :auth_token=>resource.authentication_token, :user => resource.to_json}
       return
     end
     invalid_login_attempt
