@@ -20,6 +20,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :test, :development do
+  gem "rspec-rails", "~> 2.0"
+  gem 'factory_girl_rails', ">= 1.6.0"  
+end
+
 gem 'jquery-rails'
 
 gem 'devise'
