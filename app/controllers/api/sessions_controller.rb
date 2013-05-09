@@ -9,7 +9,7 @@ class Api::SessionsController < Api::BaseController
     if resource.valid_password?(params[:user_login][:password])
       sign_in(:user, resource)
       resource.ensure_authentication_token!
-      render :json=> {:success=>true, :auth_token=>resource.authentication_token, :user => resource.to_json}
+      render :json=> {:success=>true, :auth_token=>resource.authentication_token, :user => resource.to_json}, :status => 200
       return
     end
     invalid_login_attempt
@@ -20,7 +20,7 @@ class Api::SessionsController < Api::BaseController
     return not_exists_user unless resource
     resource.authentication_token = nil
     resource.save
-    render :json=> {:success=>true}
+    render :json=> {:success=>true}, :status => 200
   end
 
   protected

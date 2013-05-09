@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
 
   has_many :questions
   has_many :talks
+  has_many :attendances
+  has_many :attended_talks, :class_name => Talk, :through => :attendances, :source => :talk
   
   validates_presence_of :username
 end

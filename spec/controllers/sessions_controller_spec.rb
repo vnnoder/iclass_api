@@ -3,6 +3,7 @@ describe Api::SessionsController do
   before (:each) do
     @user = FactoryGirl.create(:user)
   end
+
   context "Sign In" do
     it "should return user json when sign in" do
       User.count.should == 1
