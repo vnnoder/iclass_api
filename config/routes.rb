@@ -1,4 +1,7 @@
 IclassApi::Application.routes.draw do
+  resources :attendances
+
+
   devise_for :users
 
   resources :questions
@@ -12,7 +15,14 @@ IclassApi::Application.routes.draw do
     match '/sign_up' => 'registrations#create', :via => :post, :as => 'sign_up'
     match '/sign_in' => 'sessions#create', :via => :post, :as => 'sign_in'
     match '/sign_out' => 'sessions#destroy', :via => :delete, :as => 'sign_out'
-    resources :talks, :only => [:create]
+    resources :talks, :only => [:create,:index]
+    resources :talks do
+      member do
+        post 'join'
+      end
+    end
+    match '/joined_talks' => 'talks#joined_talks', :via => :get, :as => 'joined_talks'
+
   end
 
   # The priority is based upon order of creation:
