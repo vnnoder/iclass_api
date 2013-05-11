@@ -15,4 +15,8 @@ class User < ActiveRecord::Base
   has_many :attended_talks, :class_name => Talk, :through => :attendances, :source => :talk
   
   validates_presence_of :username
+
+  def joined?(talk)
+    Attendance.where(:talk_id => talk.id, :user_id => self.id).count > 0
+  end
 end

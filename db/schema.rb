@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130509152235) do
+ActiveRecord::Schema.define(:version => 20130511153340) do
 
   create_table "attendances", :force => true do |t|
     t.integer  "user_id"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20130509152235) do
     t.datetime "end_time"
     t.string   "status"
     t.integer  "user_id"
+    t.string   "passcode"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
@@ -68,5 +69,12 @@ ActiveRecord::Schema.define(:version => 20130509152235) do
 
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
   add_index "users", ["username"], :name => "index_users_on_username", :unique => true
+
+  create_table "votes", :force => true do |t|
+    t.integer  "question_id"
+    t.integer  "user_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
 end

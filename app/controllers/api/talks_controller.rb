@@ -30,6 +30,19 @@ class Api::TalksController < Api::BaseController
     end
   end
 
+  def get_by_passcode
+    if params[:passcode].nil?
+      render :json => {:success => false, :message => "missing passcode parameter"}, :status => 422
+    else
+      talk = Talk.find_by_passcode params[:passcode]
+      if talk
+        render :json => {:success => true, :talk => talk}, :status => 200
+      else
+        render :json => {:success => false, :message => "passcode not found"}, :status => 422
+      end
+    end
+  end
+
   def create
      if current_user
        talk = Talk.new()

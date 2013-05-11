@@ -7,6 +7,7 @@ class CreateTalks < ActiveRecord::Migration
       t.datetime :end_time
       t.string :status
       t.references :user
+      t.string :passcode
     
       t.timestamps
     end
