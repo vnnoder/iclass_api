@@ -1,4 +1,7 @@
 IclassApi::Application.routes.draw do
+  resources :votes
+
+
   resources :attendances
 
 
@@ -19,9 +22,18 @@ IclassApi::Application.routes.draw do
     resources :talks do
       member do
         post 'join'
+        post 'start'
+        post 'close'
+      end
+      resources :questions, :only => [:create, :index]
+      resources :questions do
+        member do
+          post 'vote'
+        end
       end
     end
     match '/joined_talks' => 'talks#joined_talks', :via => :get, :as => 'joined_talks'
+    match '/talks/passcode/:passcode' => 'talks#get_by_passcode', :via => :get, :as => 'get_by_passcode'
 
   end
 
