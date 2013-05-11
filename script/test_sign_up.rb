@@ -32,7 +32,7 @@ puts res.body
 require 'net/http'
 url = URI.parse('http://localhost:3000/api/talks')
 req = Net::HTTP::Post.new(url.path)
-req.set_form_data({"talk[title]" => "Test Title", "talk[description]" => "Test Description", "auth_token" => "Xq9xmerkwUAJEqDYzyFJ"})
+req.set_form_data({"talk[title]" => "New Title", "talk[description]" => "New Description", "auth_token" => "jp77xiw3DmvYX2v4iJeH"})
 res = Net::HTTP.start(url.host, url.port) {|http|
 	    http.request(req)
 	  }
@@ -43,7 +43,7 @@ puts res.body
 require 'net/http'
 url = URI.parse('http://localhost:3000/api/talks/1/join')
 req = Net::HTTP::Post.new(url.path)
-req.set_form_data({"auth_token" => "Xq9xmerkwUAJEqDYzyFJ"})
+req.set_form_data({"auth_token" => "jp77xiw3DmvYX2v4iJeH"})
 res = Net::HTTP.start(url.host, url.port) {|http|
   http.request(req)
 }
@@ -53,7 +53,7 @@ puts res.body
 require 'net/http'
 url = URI.parse('http://localhost:3000/api/talks')
 req = Net::HTTP::Get.new(url.path)
-req.set_form_data({"auth_token" => "Xq9xmerkwUAJEqDYzyFJ"})
+req.set_form_data({"auth_token" => "jp77xiw3DmvYX2v4iJeH"})
 res = Net::HTTP.start(url.host, url.port) {|http|
   http.request(req)
 }
@@ -63,7 +63,37 @@ puts res.body
 require 'net/http'
 url = URI.parse('http://localhost:3000/api/joined_talks')
 req = Net::HTTP::Get.new(url.path)
-req.set_form_data({"auth_token" => "Xq9xmerkwUAJEqDYzyFJ"})
+req.set_form_data({"auth_token" => "jp77xiw3DmvYX2v4iJeH"})
+res = Net::HTTP.start(url.host, url.port) {|http|
+  http.request(req)
+}
+puts res.body
+
+#join uncreated talk
+require 'net/http'
+url = URI.parse('http://localhost:3000/api/talks/100/join')
+req = Net::HTTP::Post.new(url.path)
+req.set_form_data({"auth_token" => "jp77xiw3DmvYX2v4iJeH"})
+res = Net::HTTP.start(url.host, url.port) {|http|
+  http.request(req)
+}
+puts res.body
+
+#start talk
+require 'net/http'
+url = URI.parse('http://localhost:3000/api/talks/1/start')
+req = Net::HTTP::Post.new(url.path)
+req.set_form_data({"auth_token" => "jp77xiw3DmvYX2v4iJeH"})
+res = Net::HTTP.start(url.host, url.port) {|http|
+  http.request(req)
+}
+puts res.body
+
+#end talk
+require 'net/http'
+url = URI.parse('http://localhost:3000/api/talks/1/close')
+req = Net::HTTP::Post.new(url.path)
+req.set_form_data({"auth_token" => "jp77xiw3DmvYX2v4iJeH"})
 res = Net::HTTP.start(url.host, url.port) {|http|
   http.request(req)
 }

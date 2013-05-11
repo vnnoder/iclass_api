@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(:version => 20130509152235) do
   create_table "talks", :force => true do |t|
     t.string   "title"
     t.text     "description"
-    t.date     "start_date"
-    t.date     "end_date"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.string   "status"
     t.integer  "user_id"
     t.datetime "created_at",  :null => false

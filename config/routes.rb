@@ -19,6 +19,8 @@ IclassApi::Application.routes.draw do
     resources :talks do
       member do
         post 'join'
+        post 'start'
+        post 'close'
       end
     end
     match '/joined_talks' => 'talks#joined_talks', :via => :get, :as => 'joined_talks'
