@@ -13,10 +13,15 @@ class User < ActiveRecord::Base
   has_many :talks
   has_many :attendances
   has_many :attended_talks, :class_name => Talk, :through => :attendances, :source => :talk
+  has_many :votes
   
   validates_presence_of :username
 
   def joined?(talk)
     Attendance.where(:talk_id => talk.id, :user_id => self.id).count > 0
+  end
+
+  def as_json(options={})
+    super(:except =>[:password, :password_confirmation, :remember_me])
   end
 end

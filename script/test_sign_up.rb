@@ -12,7 +12,7 @@ puts res.body
 require 'net/http'
 url = URI.parse('http://localhost:3000/api/sign_in')
 req = Net::HTTP::Post.new(url.path)
-req.set_form_data({"user_login[username]" => "test", "user_login[password]" => "test12345"})
+req.set_form_data({"user_login[username]" => "test2", "user_login[password]" => "test12345"})
 res = Net::HTTP.start(url.host, url.port) {|http|
 	    http.request(req)
 	  }
