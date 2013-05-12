@@ -1,6 +1,6 @@
 class Api::QuestionsController < Api::BaseController
   before_filter :authenticate_user!
-  before_filter :ensure_can_load_talk, :ensure_user_joined_talk
+  before_filter :ensure_can_load_talk, :ensure_user_joined_or_owned_talk
   before_filter :ensure_can_load_question, :only => :vote
   before_filter :ensure_valid_question, :only => :vote
   before_filter :ensure_params_exist, :only => :create
@@ -39,8 +39,8 @@ class Api::QuestionsController < Api::BaseController
     end
   end
 
-  def ensure_user_joined_talk
-    return if current_user.joined?(@talk)
+  def ensure_user_joined_or_owned_talk
+    return if current_user.joined?(@talk) or current_user.owned?(@talk)
     render :json => {:success => FALSE_VALUE, :message => "user has not joined talk"}, :status => 422
   end
 
