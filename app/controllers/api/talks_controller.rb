@@ -1,8 +1,8 @@
 class Api::TalksController < Api::BaseController
   before_filter :authenticate_user!
   before_filter :ensure_params_exist, :only => :create
-  before_filter :ensure_id_exists, :only => [:start, :join]
-  before_filter :ensure_can_load_talk, :only => [:start, :join, :close]
+  before_filter :ensure_id_exists, :only => [:start, :join, :leave]
+  before_filter :ensure_can_load_talk, :only => [:start, :join, :close, :leave]
 
   def ensure_params_exist
     return unless params[:talk].blank? or params[:talk][:title].blank?
@@ -24,7 +24,7 @@ class Api::TalksController < Api::BaseController
 
   def index
     if current_user
-      render :json => {:success => TRUE_VALUE, :talks => current_user.talks}, :status => 200
+      render :json => {:success => TRUE_VALUE, :talks => current_user.talks.select{|talk| talk.status == 'open' or talk.status == 'pending'}}, :status => 200
     else
       render :json => {:success => FALSE_VALUE, :message => "user not logged in"}, :status => 401
     end
@@ -120,9 +120,24 @@ class Api::TalksController < Api::BaseController
     end
   end
 
+  def leave
+    if current_user.nil?
+      render :json => {:success => FALSE_VALUE, :message => "user not logged in"}, :status => 401
+    else
+      attendance = Attendance.find_by_user_id_and_talk_id(current_user.id, @talk.id)
+      if attendance and attendance.destroy
+        render :json => {:success => TRUE_VALUE, :attendance => attendance}, :status => 200
+      elsif attendance.nil?
+        render :json => {:success => FALSE_VALUE, :message => "have not joined talk"}, :status => 422
+      else
+        render :json => {:success => FALSE_VALUE, :message => "cannot leave talk"}, :status => 422
+      end
+    end
+  end
+
   def joined_talks
     if current_user
-      render :json => {:success => TRUE_VALUE, :talks => current_user.attended_talks}, :status => 200
+      render :json => {:success => TRUE_VALUE, :talks => current_user.attended_talks.select{|talk| talk.status == 'open'}}, :status => 200
     else
       render :json => {:success => FALSE_VALUE, :message => "user not logged in"}, :status => 401
     end

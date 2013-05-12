@@ -21,6 +21,10 @@ class User < ActiveRecord::Base
     Attendance.where(:talk_id => talk.id, :user_id => self.id).count > 0
   end
 
+  def owned?(talk)
+    talk.user_id == self.id
+  end
+
   def as_json(options={})
     super(:except =>[:password, :password_confirmation, :remember_me])
   end
