@@ -24,7 +24,7 @@ class Api::TalksController < Api::BaseController
 
   def index
     if current_user
-      render :json => {:success => true, :talks => current_user.talks.to_json}, :status => 200
+      render :json => {:success => true, :talks => current_user.talks}, :status => 200
     else
       render :json => {:success => false, :message => "user not logged in"}, :status => 401
     end
@@ -52,7 +52,7 @@ class Api::TalksController < Api::BaseController
        talk.status = 'pending'
        talk.save
        unless talk.new_record?
-         render :json => {:success => true, :talk => talk.to_json}, :status => 200
+         render :json => {:success => true, :talk => talk}, :status => 200
        else
         render :json => {:success => false, :message => "unable to create talk"}, :status => 422
        end
@@ -72,7 +72,7 @@ class Api::TalksController < Api::BaseController
           @talk.status = 'open'
           @talk.start_time = Time.now
           if @talk.save
-            render :json => {:success => true, :talk => @talk.to_json}, :status => 200
+            render :json => {:success => true, :talk => @talk}, :status => 200
           else
             render :json => {:success => false, :message => "unable to start talk"}, :status => 422
           end
@@ -94,7 +94,7 @@ class Api::TalksController < Api::BaseController
           @talk.status = 'closed'
           @talk.end_time = Time.now
           if @talk.save
-            render :json => {:success => true, :talk => @talk.to_json}, :status => 200
+            render :json => {:success => true, :talk => @talk}, :status => 200
           else
             render :json => {:success => false, :message => "unable to end talk"}, :status => 422
           end
@@ -111,7 +111,7 @@ class Api::TalksController < Api::BaseController
         record.start_time = Time.now
       end
       unless attendance.new_record?
-        render :json => {:success => true, :attendance => attendance.to_json}, :status => 200
+        render :json => {:success => true, :attendance => attendance}, :status => 200
       else
         render :json => {:success => false, :message => "unable to join talk"}, :status => 422
       end
@@ -122,7 +122,7 @@ class Api::TalksController < Api::BaseController
 
   def joined_talks
     if current_user
-      render :json => {:success => true, :talks => current_user.attended_talks.to_json}, :status => 200
+      render :json => {:success => true, :talks => current_user.attended_talks}, :status => 200
     else
       render :json => {:success => false, :message => "user not logged in"}, :status => 401
     end

@@ -7,8 +7,13 @@ class Talk < ActiveRecord::Base
 
   attr_accessible :description, :end_time, :start_time, :status, :title, :user_id, :passcode
 
+  def as_json(options={})
+    super
+  end
+
   private
   def generate_passcode
     self.passcode = SecureRandom.hex(3)
   end
+
 end

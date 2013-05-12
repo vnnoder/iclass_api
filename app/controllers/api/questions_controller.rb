@@ -51,7 +51,7 @@ class Api::QuestionsController < Api::BaseController
 
   def index
     if current_user
-      render :json => {:success => true, :questions => @talk.questions.to_json}, :status => 200
+      render :json => {:success => true, :questions => @talk.questions}, :status => 200
     else
       render :json => {:success => false, :message => "user not logged in"}, :status => 401
     end
@@ -66,7 +66,7 @@ class Api::QuestionsController < Api::BaseController
       question.talk = @talk
 
       if question.save
-        render :json => {:success => true, :question => question.to_json}, :status => 200
+        render :json => {:success => true, :question => question}, :status => 200
       else
         render :json => {:success => false, :message => "unable to create question"}, :status => 422
       end
@@ -83,7 +83,7 @@ class Api::QuestionsController < Api::BaseController
     else
       vote = Vote.create(:question_id => @question.id, :user_id => current_user.id)
       if vote
-        render :json => {:success => true, :vote => vote.to_json}, :status => 200
+        render :json => {:success => true, :vote => vote}, :status => 200
       else
         render :json => {:success => false, :message => "unable to vote for question"}, :status => 422
       end
