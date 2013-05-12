@@ -1,6 +1,6 @@
 class Api::BaseController < ApplicationController
-  TRUE_VALUE = 1
-  FALSE_VALUE = 0
+  TRUE_VALUE = "true"
+  FALSE_VALUE = "false"
 
   include JsonRescuable
   respond_to :json
