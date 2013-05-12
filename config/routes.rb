@@ -24,6 +24,7 @@ IclassApi::Application.routes.draw do
         post 'join'
         post 'start'
         post 'close'
+        post 'leave'
       end
       resources :questions, :only => [:create, :index]
       resources :questions do

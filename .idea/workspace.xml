@@ -32,28 +32,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="json_rescuable.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/json_rescuable.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="42" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="questions_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/questions_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="70" selection-start="1558" selection-end="1558" vertical-scroll-proportion="-4.9454546">
+            <state line="42" column="70" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="27" selection-start="882" selection-end="882" vertical-scroll-proportion="0.7470817">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="talk.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/talk.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="22" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -62,7 +62,7 @@
       <file leaf-file-name="sessions_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/sessions_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="20" selection-start="1290" selection-end="1290" vertical-scroll-proportion="-4.672727">
+            <state line="36" column="20" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -71,7 +71,7 @@
       <file leaf-file-name="test_sign_up.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script/test_sign_up.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="15" selection-start="373" selection-end="669" vertical-scroll-proportion="0.0">
+            <state line="170" column="13" selection-start="4901" selection-end="5160" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -80,25 +80,25 @@
       <file leaf-file-name="test_push_notification.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/script/test_push_notification.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="28" selection-start="839" selection-end="839" vertical-scroll-proportion="0.0">
+            <state line="18" column="19" selection-start="839" selection-end="839" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="talks_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="talks_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/talks_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="41" selection-start="41" selection-end="41" vertical-scroll-proportion="-0.0">
+            <state line="142" column="45" selection-start="5307" selection-end="5307" vertical-scroll-proportion="0.7450199">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/api/users_controller.rb">
+      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="26" column="14" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -123,22 +123,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/talks/show.html.erb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/app/models/attendance.rb" />
         <option value="$PROJECT_DIR$/app/models/question.rb" />
-        <option value="$PROJECT_DIR$/app/models/talk.rb" />
         <option value="$PROJECT_DIR$/app/models/vote.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/lib/json_rescuable.rb" />
-        <option value="$PROJECT_DIR$/script/test_sign_up.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/registrations_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/sessions_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/api/talks_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/base_controller.rb" />
-        <option value="$PROJECT_DIR$/script/test_push_notification.rb" />
         <option value="$PROJECT_DIR$/app/controllers/api/questions_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/script/test_push_notification.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/script/test_sign_up.rb" />
+        <option value="$PROJECT_DIR$/app/models/talk.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/api/talks_controller.rb" />
       </list>
     </option>
   </component>
@@ -180,8 +180,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -448,6 +446,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -717,12 +717,12 @@
       <method />
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="1" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Production: iclass_api" />
-      <item index="3" class="java.lang.String" itemvalue="Rails.Development: iclass_api" />
-      <item index="4" class="java.lang.String" itemvalue="RSpec.registrations_controller_spec" />
-      <item index="5" class="java.lang.String" itemvalue="RSpec.sessions_controller_spec" />
+      <item index="0" class="java.lang.String" itemvalue="RSpec.registrations_controller_spec" />
+      <item index="1" class="java.lang.String" itemvalue="RSpec.sessions_controller_spec" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="3" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="4" class="java.lang.String" itemvalue="Rails.Production: iclass_api" />
+      <item index="5" class="java.lang.String" itemvalue="Rails.Development: iclass_api" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -749,11 +749,10 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23457676" sideWeight="0.7245817" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27541828" sideWeight="0.9964132" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23816356" sideWeight="0.7258687" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27413127" sideWeight="0.9964132" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -761,6 +760,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947233" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -826,46 +826,24 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/attendance.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="10" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/question.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="18" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/talk.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="9" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="17" column="18" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/questions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/attendances_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/users_controller.rb">
@@ -891,14 +869,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/sessions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="20" selection-start="1290" selection-end="1290" vertical-scroll-proportion="-4.672727">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/talks_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="41" selection-start="41" selection-end="41" vertical-scroll-proportion="-0.0">
+        <state line="36" column="20" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -910,30 +881,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script/test_sign_up.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/questions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="15" selection-start="373" selection-end="669" vertical-scroll-proportion="0.0">
+        <state line="42" column="70" selection-start="1558" selection-end="1558" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/script/test_push_notification.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="28" selection-start="839" selection-end="839" vertical-scroll-proportion="0.0">
+        <state line="18" column="19" selection-start="839" selection-end="839" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api/questions_controller.rb">
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="70" selection-start="1558" selection-end="1558" vertical-scroll-proportion="-4.9454546">
+        <state line="26" column="14" selection-start="715" selection-end="715" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/test_sign_up.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="170" column="13" selection-start="4901" selection-end="5160" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="27" selection-start="882" selection-end="882" vertical-scroll-proportion="0.7470817">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/talk.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="22" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api/talks_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="45" selection-start="5307" selection-end="5307" vertical-scroll-proportion="0.7450199">
           <folding />
         </state>
       </provider>

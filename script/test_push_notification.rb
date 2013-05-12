@@ -7,7 +7,7 @@ pusher = Grocer.pusher(
     retries:     3                         # optional
 )
 notification = Grocer::Notification.new(
-    device_token: "fe15a27d5df3c34778defb1f4f3880265cc52c0c047682223be59fb68500a9a2",
+    device_token: "790dfc8982e59f7936db182c2ccda5d3707d5034c7dac8e001bfae5bc73403fd",
     alert:        "Hello from Grocer!",
     badge:        42,
     sound:        "siren.aiff",         # optional

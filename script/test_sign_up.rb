@@ -159,3 +159,13 @@ res = Net::HTTP.start(url.host, url.port) {|http|
   http.request(req)
 }
 puts res.body
+
+#leave talk
+require 'net/http'
+url = URI.parse('http://localhost:3000/api/talks/1/leave')
+req = Net::HTTP::Post.new(url.path)
+req.set_form_data({"auth_token" => "xNSznUyK6uagS86u4JoV"})
+res = Net::HTTP.start(url.host, url.port) {|http|
+  http.request(req)
+}
+puts res.body

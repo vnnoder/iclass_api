@@ -7,6 +7,10 @@ class Talk < ActiveRecord::Base
 
   attr_accessible :description, :end_time, :start_time, :status, :title, :user_id, :passcode
 
+  scope :pending, where(:status => 'pending')
+  scope :open, where(:status => 'open')
+  scope :closed, where(:status => 'closed')
+
   def as_json(options={})
     super
   end
