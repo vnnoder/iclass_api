@@ -9,7 +9,7 @@ class Api::SessionsController < Api::BaseController
     if resource.valid_password?(params[:user_login][:password])
       sign_in(:user, resource)
       resource.ensure_authentication_token!
-      render :json=> {:success=>true, :auth_token=>resource.authentication_token, :user => resource}, :status => 200
+      render :json=> {:success => TRUE_VALUE, :auth_token=>resource.authentication_token, :user => resource}, :status => 200
       return
     end
     invalid_login_attempt
@@ -20,21 +20,21 @@ class Api::SessionsController < Api::BaseController
     return not_exists_user unless resource
     resource.authentication_token = nil
     resource.save
-    render :json=> {:success=>true}, :status => 200
+    render :json=> {:success => TRUE_VALUE}, :status => 200
   end
 
   protected
   def ensure_params_exist
     return unless params[:user_login].blank?
-    render :json=>{:success=>false, :message=>"missing user_login parameter"}, :status=>422
+    render :json=>{:success => FALSE_VALUE, :message=>"missing user_login parameter"}, :status=>422
   end
 
   def invalid_login_attempt
-    render :json=> {:success=>false, :message=>"Error with your login or password"}, :status=>401
+    render :json=> {:success => FALSE_VALUE, :message=>"Error with your login or password"}, :status=>401
   end
 
   def not_exists_user
-    render :json=> {:success=>false, :message=>"Invalid username"}, :status=>401
+    render :json=> {:success => FALSE_VALUE, :message=>"Invalid username"}, :status=>401
   end
 
 end
