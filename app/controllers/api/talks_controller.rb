@@ -92,9 +92,8 @@ class Api::TalksController < Api::BaseController
         if @talk.status == 'closed'
           render :json => {:success => FALSE_VALUE, :message => "talk already closed"}, :status => 424
         else
-          @talk.status = 'closed'
-          @talk.end_time = Time.now
-          if @talk.save
+          if @talk.close
+
             render :json => {:success => TRUE_VALUE, :talk => @talk}, :status => 200
           else
             render :json => {:success => FALSE_VALUE, :message => "unable to end talk"}, :status => 422
