@@ -14,7 +14,8 @@ class User < ActiveRecord::Base
   has_many :attendances
   has_many :attended_talks, :class_name => Talk, :through => :attendances, :source => :talk
   has_many :votes
-  
+  has_one :user_device_token
+
   validates_presence_of :username
 
   def joined?(talk)

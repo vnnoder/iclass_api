@@ -1,0 +1,25 @@
+<%= form_for(@user_device_token) do |f| %>
+  <% if @user_device_token.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_device_token.errors.count, "error") %> prohibited this user_device_token from being saved:</h2>
+
+      <ul>
+      <% @user_device_token.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :device_token %><br />
+    <%= f.text_field :device_token %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

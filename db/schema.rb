@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130511153340) do
+ActiveRecord::Schema.define(:version => 20130512134303) do
 
   create_table "attendances", :force => true do |t|
     t.integer  "user_id"
@@ -47,6 +47,13 @@ ActiveRecord::Schema.define(:version => 20130511153340) do
   end
 
   add_index "talks", ["user_id"], :name => "index_talks_on_user_id"
+
+  create_table "user_device_tokens", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "device_token"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"

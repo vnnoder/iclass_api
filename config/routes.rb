@@ -1,4 +1,7 @@
 IclassApi::Application.routes.draw do
+  resources :user_device_tokens
+
+
   resources :votes
 
 
@@ -35,7 +38,7 @@ IclassApi::Application.routes.draw do
     end
     match '/joined_talks' => 'talks#joined_talks', :via => :get, :as => 'joined_talks'
     match '/talks/passcode/:passcode' => 'talks#get_by_passcode', :via => :get, :as => 'get_by_passcode'
-
+    match '/update_device_token' => 'users#update_device_token', :via => :post, :as => 'update_device_token'
   end
 
   # The priority is based upon order of creation:
