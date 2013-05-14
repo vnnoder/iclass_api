@@ -169,3 +169,13 @@ res = Net::HTTP.start(url.host, url.port) {|http|
   http.request(req)
 }
 puts res.body
+
+#update device token
+require 'net/http'
+url = URI.parse('http://localhost:3000/api/update_device_token')
+req = Net::HTTP::Post.new(url.path)
+req.set_form_data({"auth_token" => "xNSznUyK6uagS86u4JoV", "device_token" => "790dfc8982e59f7936db182c2ccda5d3707d5034c7dac8e001bfae5bc73403fd"})
+res = Net::HTTP.start(url.host, url.port) {|http|
+  http.request(req)
+}
+puts res.body
