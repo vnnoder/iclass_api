@@ -48,6 +48,7 @@ class Api::TalksController < Api::BaseController
        talk = Talk.new()
        talk.title = params[:talk][:title]
        talk.description = params[:talk][:description]
+       talk.location = params[:talk][:location]
        talk.user = current_user
        talk.status = 'pending'
        talk.save

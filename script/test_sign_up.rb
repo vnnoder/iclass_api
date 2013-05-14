@@ -179,3 +179,13 @@ res = Net::HTTP.start(url.host, url.port) {|http|
   http.request(req)
 }
 puts res.body
+
+#test create talk with location
+require 'net/http'
+url = URI.parse('http://localhost:3000/api/talks')
+req = Net::HTTP::Post.new(url.path)
+req.set_form_data({"talk[title]" => "New Title", "talk[description]" => "New Description", "talk[location]" => "Room 3-7, Institute of System Science", "auth_token" => "xNSznUyK6uagS86u4JoV"})
+res = Net::HTTP.start(url.host, url.port) {|http|
+  http.request(req)
+}
+puts res.body

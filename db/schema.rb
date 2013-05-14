@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130512134303) do
+ActiveRecord::Schema.define(:version => 20130514171014) do
 
   create_table "attendances", :force => true do |t|
     t.integer  "user_id"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20130512134303) do
     t.string   "passcode"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "location"
   end
 
   add_index "talks", ["user_id"], :name => "index_talks_on_user_id"

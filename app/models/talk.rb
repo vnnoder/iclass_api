@@ -5,7 +5,7 @@ class Talk < ActiveRecord::Base
 
   before_create :generate_passcode
 
-  attr_accessible :description, :end_time, :start_time, :status, :title, :user_id, :passcode
+  attr_accessible :description, :end_time, :start_time, :status, :title, :user_id, :passcode, :location
 
   scope :pending, where(:status => 'pending')
   scope :open, where(:status => 'open')
