@@ -11,13 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130514171014) do
+ActiveRecord::Schema.define(:version => 20130618180405) do
 
   create_table "attendances", :force => true do |t|
     t.integer  "user_id"
     t.integer  "talk_id"
     t.datetime "start_time"
     t.datetime "end_time"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "options", :force => true do |t|
+    t.text     "content"
+    t.integer  "survey_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -33,6 +40,14 @@ ActiveRecord::Schema.define(:version => 20130514171014) do
 
   add_index "questions", ["talk_id"], :name => "index_questions_on_talk_id"
   add_index "questions", ["user_id"], :name => "index_questions_on_user_id"
+
+  create_table "surveys", :force => true do |t|
+    t.text     "question"
+    t.integer  "talk_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "survey_type"
+  end
 
   create_table "talks", :force => true do |t|
     t.string   "title"

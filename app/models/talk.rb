@@ -3,6 +3,7 @@ class Talk < ActiveRecord::Base
   belongs_to :user
   has_many :attendances
   has_many :attended_users, :class_name => User, :through => :attendances, :source => :user
+  has_many :surveys
 
   before_create :generate_passcode
 

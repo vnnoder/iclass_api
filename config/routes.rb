@@ -1,4 +1,10 @@
 IclassApi::Application.routes.draw do
+  resources :options
+
+
+  resources :surveys
+
+
   resources :user_device_tokens
 
 
