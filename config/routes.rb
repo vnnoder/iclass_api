@@ -1,24 +1,17 @@
 IclassApi::Application.routes.draw do
-  resources :options
-
-
-  resources :surveys
-
-
-  resources :user_device_tokens
-
-
-  resources :votes
-
-
-  resources :attendances
-
-
   devise_for :users
 
-  resources :questions
-  resources :talks
-  resources :users
+  namespace :admin do
+    resources :options
+    resources :surveys
+    resources :user_device_tokens
+    resources :votes
+    resources :attendances
+    resources :questions
+    resources :talks
+    resources :users
+  end
+
 
   namespace :api do
     devise_for :users
