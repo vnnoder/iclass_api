@@ -13,9 +13,9 @@
   <tr>
     <td><%= user_device_token.user %></td>
     <td><%= user_device_token.device_token %></td>
-    <td><%= link_to 'Show', user_device_token %></td>
+    <td><%= link_to 'Show', admin_user_device_token_path(user_device_token) %></td>
     <td><%= link_to 'Edit', edit_admin_user_device_token_path(user_device_token) %></td>
-    <td><%= link_to 'Destroy', user_device_token, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Destroy', admin_user_device_token_path(user_device_token), method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

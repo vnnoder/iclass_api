@@ -13,9 +13,9 @@
   <tr>
     <td><%= option.content %></td>
     <td><%= option.survey %></td>
-    <td><%= link_to 'Show', option %></td>
+    <td><%= link_to 'Show', admin_option_path(option) %></td>
     <td><%= link_to 'Edit', edit_admin_option_path(option) %></td>
-    <td><%= link_to 'Destroy', option, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Destroy', admin_option_path(option), method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
