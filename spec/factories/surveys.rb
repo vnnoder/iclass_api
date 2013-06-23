@@ -16,7 +16,7 @@ FactoryGirl.define do
     end
 
     before(:create) do |survey, evaluator|
-      FactoryGirl.create_list(:option, evaluator.options_count, :survey => survey)
+      FactoryGirl.build_list(:option, evaluator.options_count, :survey => survey)
     end
   end
 end

@@ -1,7 +1,7 @@
 class Survey < ActiveRecord::Base
   MULTIPLE_CHOICES = 1
   FREE_TEXT = 2
-  attr_accessible :question, :talk, :survey_type
+  attr_accessible :question, :talk, :survey_type, :talk_id, :options_attributes
   belongs_to :talk
   has_many :options
 

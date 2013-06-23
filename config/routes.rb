@@ -41,6 +41,7 @@ IclassApi::Application.routes.draw do
           post 'vote'
         end
       end
+      resources :surveys
     end
     match '/joined_talks' => 'talks#joined_talks', :via => :get, :as => 'joined_talks'
     match '/talks/passcode/:passcode' => 'talks#get_by_passcode', :via => :get, :as => 'get_by_passcode'
